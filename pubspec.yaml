@@ -1,0 +1,27 @@
+name: cybersafe
+description: "CyberSafe - Mobile Threat Defense and Cyber Security Awareness App"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  provider: ^6.1.2
+  google_fonts: ^6.2.1
+  flutter_animate: ^4.5.0
+  url_launcher: ^6.3.0
+  crypto: ^3.0.3
+  intl: ^0.20.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
