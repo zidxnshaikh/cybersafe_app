@@ -31,5 +31,13 @@ void main() {
     expect(find.text('CyberSafe'), findsOneWidget);
     expect(find.text('Phishing & Scam Link Analyzer'), findsOneWidget);
     expect(find.text('1930 Helpline'), findsOneWidget);
+    expect(find.text('Paste your Gemini API key'), findsNothing);
+    expect(
+      find.text(
+        'Gemini is not configured for this build. '
+        'The local scan is still available.',
+      ),
+      findsOneWidget,
+    );
   });
 }

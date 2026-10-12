@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'providers/threat_provider.dart';
 import 'screens/emergency_guide_screen.dart';
+import 'screens/history_screen.dart';
 import 'screens/password_auditor_screen.dart';
 import 'screens/scam_simulator_screen.dart';
 import 'screens/threat_scanner_screen.dart';
@@ -70,6 +71,7 @@ class _CyberSafeHomeScreenState extends State<CyberSafeHomeScreen> {
     PasswordAuditorScreen(),
     ScamSimulatorScreen(),
     EmergencyGuideScreen(),
+    HistoryScreen(),
   ];
 
   @override
@@ -86,10 +88,12 @@ class _CyberSafeHomeScreenState extends State<CyberSafeHomeScreen> {
                 color: const Color(0xFF10B981).withValues(alpha: 0.15),
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: const Icon(Icons.shield, color: Color(0xFF10B981), size: 20),
+              child:
+                  const Icon(Icons.shield, color: Color(0xFF10B981), size: 20),
             ),
             const SizedBox(width: 12),
-            const Text('CyberSafe', style: TextStyle(fontWeight: FontWeight.w700)),
+            const Text('CyberSafe',
+                style: TextStyle(fontWeight: FontWeight.w700)),
           ],
         ),
         actions: [
@@ -107,13 +111,15 @@ class _CyberSafeHomeScreenState extends State<CyberSafeHomeScreen> {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Icon(Icons.phone_in_talk, color: Colors.redAccent, size: 14),
+                      Icon(Icons.phone_in_talk,
+                          color: Colors.redAccent, size: 14),
                       SizedBox(width: 6),
-                      Text('1930 Helpline', style: TextStyle(
-                        color: Colors.redAccent,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                      )),
+                      Text('1930 Helpline',
+                          style: TextStyle(
+                            color: Colors.redAccent,
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                          )),
                     ],
                   ),
                 ),
@@ -130,9 +136,13 @@ class _CyberSafeHomeScreenState extends State<CyberSafeHomeScreen> {
         onDestinationSelected: (index) => setState(() => _currentIndex = index),
         destinations: const [
           NavigationDestination(icon: Icon(Icons.search), label: 'Scanner'),
-          NavigationDestination(icon: Icon(Icons.lock_outline), label: 'Password'),
-          NavigationDestination(icon: Icon(Icons.chat_bubble_outline), label: 'Practice'),
-          NavigationDestination(icon: Icon(Icons.sos_outlined), label: 'Emergency'),
+          NavigationDestination(
+              icon: Icon(Icons.lock_outline), label: 'Password'),
+          NavigationDestination(
+              icon: Icon(Icons.chat_bubble_outline), label: 'Practice'),
+          NavigationDestination(
+              icon: Icon(Icons.sos_outlined), label: 'Emergency'),
+          NavigationDestination(icon: Icon(Icons.history), label: 'History'),
         ],
       ),
     );
